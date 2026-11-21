@@ -4,29 +4,31 @@ models:
   - name: stg_orders
     columns:
       - name: order_id
-        tests: [unique, not_null]
+        data_tests: [unique, not_null]
       - name: user_id
-        tests:
+        data_tests:
           - not_null
           - relationships:
-              to: ref('stg_users')
-              field: user_id
+              arguments:
+                to: ref('stg_users')
+                field: user_id
   - name: stg_order_items
     columns:
       - name: order_item_id
-        tests: [unique, not_null]
+        data_tests: [unique, not_null]
       - name: sale_price
-        tests: [not_null]
+        data_tests: [not_null]
       - name: product_id
-        tests:
+        data_tests:
           - relationships:
-              to: ref('stg_products')
-              field: product_id
+              arguments:
+                to: ref('stg_products')
+                field: product_id
   - name: stg_users
     columns:
       - name: user_id
-        tests: [unique, not_null]
+        data_tests: [unique, not_null]
   - name: stg_products
     columns:
       - name: product_id
-        tests: [unique, not_null]
+        data_tests: [unique, not_null]
