@@ -1,0 +1,20 @@
+# Copy this file to ~/.dbt/profiles.yml and replace YOUR_GCP_PROJECT_ID.
+# The public dataset lives in the US multi-region, so location must be US.
+ecommerce_analytics_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth            # local work: run `gcloud auth application-default login` first
+      project: YOUR_GCP_PROJECT_ID
+      dataset: dbt_dev
+      location: US
+      threads: 4
+    ci:
+      type: bigquery
+      method: service-account  # used by GitHub Actions
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      keyfile: "{{ env_var('GCP_KEYFILE_PATH') }}"
+      dataset: dbt_ci
+      location: US
+      threads: 4

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fct_monthly_revenue
+    description: "Monthly revenue, orders, customers and month-over-month growth."
+    columns:
+      - name: revenue_month
+        tests: [unique, not_null]
+  - name: fct_cohort_retention
+    description: "Customer retention by month of first purchase."
+  - name: dim_customers
+    description: "Customer lifetime value and RFM segmentation."
+    columns:
+      - name: user_id
+        tests: [unique, not_null]
+  - name: fct_product_performance
+    description: "Product revenue, margin and rank within category."
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
