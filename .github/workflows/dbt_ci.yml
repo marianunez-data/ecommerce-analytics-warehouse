@@ -1,0 +1,40 @@
+name: dbt CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  dbt-build:
+    runs-on: ubuntu-latest
+    env:
+      GCP_PROJECT_ID: project-5cd15bdc-ec10-4137-b9f
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud (keyless)
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/874918168057/locations/global/workloadIdentityPools/github-pool/providers/github-provider
+          service_account: dbt-runner@project-5cd15bdc-ec10-4137-b9f.iam.gserviceaccount.com
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dbt
+        run: pip install -r requirements.txt
+
+      - name: Set up dbt profile
+        run: mkdir -p ~/.dbt && cp profiles.yml.example ~/.dbt/profiles.yml
+
+      - name: Install packages
+        run: dbt deps
+
+      - name: Build and test all models
+        run: dbt build --target ci
