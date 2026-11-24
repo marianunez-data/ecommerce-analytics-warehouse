@@ -74,7 +74,7 @@ Key decisions:
 Total revenue is $7.54M from 88,677 orders (average order value $85.08). From May to October 2026, monthly revenue grew 59% ($230K to $367K) while orders grew 59% (2,728 to 4,335). Average order value stayed between $82.75 and $86.00. To keep growing, the store depends on acquiring and converting more buyers.
 
 **2. Repeat purchase is the biggest gap, but newer cohorts are improving.**
-Across all cohorts since 2019, only 1.94% of customers buy again in their first month after purchase, and 1.54% in month 12. Recent cohorts perform better: month 1 retention rose from 2.70% (November 2025 cohort) to 9.61% (October 2026 cohort, with November still in progress).
+Across all cohorts since 2019, only 1.94% of customers buy again in their first month after purchase, and 1.54% in month 12. Recent cohorts perform better: month 1 retention rose from 2.70% (November 2025 cohort) to 8.21% (September 2026 cohort).
 
 **3. A quarter of customers bring half of the revenue, and half of that group is at risk.**
 Champions (12.5% of customers) generate 26.0% of revenue. At risk (high value) customers (14.0%) generate another 25.4%. Together, 26.5% of customers account for 51.4% of revenue. Lost customers are the largest group (26.0%) but bring only 10.1%. A win-back campaign should target the 9,238 at-risk high-value customers first.
