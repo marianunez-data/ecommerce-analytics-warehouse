@@ -105,15 +105,6 @@ dbt deps
 dbt build              # builds 8 models and runs 20 tests
 dbt docs generate      # lineage graph and model documentation
 ```
-
-## Related project
-
-[NovaTech Revenue Intelligence](https://github.com/marianunez-data/novatech-revenue-intelligence) is a BI project on AWS QuickSight. This project covers the step before the dashboard: modeling, testing and automating the data with dbt.
-
-## Credentials earned while building this project
-
-- [HackerRank SQL (Intermediate)](https://www.hackerrank.com/certificates/iframe/309fd05263a9)
-
 ## Author
 
 María Camila González Núñez
