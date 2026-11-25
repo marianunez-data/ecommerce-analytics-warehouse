@@ -105,6 +105,7 @@ dbt deps
 dbt build              # builds 8 models and runs 20 tests
 dbt docs generate      # lineage graph and model documentation
 ```
+
 ## Author
 
-María Camila González Núñez
+**Maria Camila Gonzalez Nuñez** · [LinkedIn](https://www.linkedin.com/in/marianunez-data)

@@ -1,4 +1,4 @@
--- One row per order. Check column names in the BigQuery schema tab before running.
+-- One row per order.
 select
     order_id,
     user_id,
